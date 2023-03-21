@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./SecondPage.module.css";
+import styles from "../styles/SecondPage.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";

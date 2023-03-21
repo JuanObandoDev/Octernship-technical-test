@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./FirstPage.module.css";
+import styles from "../styles/FirstPage.module.css";
 import { useValidateInput } from "./hooks/useValidateInput";
 
 function FirstPage({ setValid, value, setValue }) {

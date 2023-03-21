@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/App.css";
 import React from "react";
 import { FirstPage } from "./components/FirstPage";
 import { SecondPage } from "./components/SecondPage";
