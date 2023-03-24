@@ -18,8 +18,7 @@ function FirstPage() {
     <>
       <div className={styles.main}>
         <input
-          onChange={(e) => setInputValue(e.target.value)}
-          value={inputValue}
+          onChange={(e) => setInputValue(e.target.value.toLowerCase())}
           className={styles.input}
           type="text"
           placeholder="Enter any text"
