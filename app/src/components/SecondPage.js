@@ -3,34 +3,39 @@ import styles from "../styles/SecondPage.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import { useFindCopy } from "./hooks/useFindCopy";
-import { useDeleteCopy } from "./hooks/useDeleteCopy";
-import { useValidate } from "./hooks/useValidate";
+import { useFindCopy } from "../hooks/useFindCopy";
+import { useDeleteCopy } from "../hooks/useDeleteCopy";
+import { useValidate } from "../hooks/useValidate";
+import { useContext } from "react";
+import { inputContext } from "../context/inputContext";
 
-function SecondPage({ value, setValue }) {
-  const [valueOriginal, setValueOriginal] = useState(value);
+function SecondPage() {
+  const { inputValue, setInputValue } = useContext(inputContext);
+  const [valueOriginal, setValueOriginal] = useState(inputValue);
 
   return (
     <>
-      {useValidate(value) ? (
+      {useValidate(inputValue) ? (
         <header className={styles.success}>
           <p>
             Success, all duplicate characters was removed <br></br> string
             before: <span className={styles.originStr}>{valueOriginal}</span>,
-            string after: <span className={styles.resultStr}>{value}</span>
+            string after: <span className={styles.resultStr}>{inputValue}</span>
           </p>
         </header>
       ) : (
         <></>
       )}
       <div className={styles.main}>
-        {value.split("").map((item, index) => {
+        {inputValue.split("").map((item, index) => {
           return (
             <div className={styles.card} id={index} key={index}>
-              {useFindCopy(item, index, value) ? (
+              {useFindCopy(item, index, inputValue) ? (
                 <button
                   className={styles.delete}
-                  onClick={() => useDeleteCopy(item, index, value, setValue)}
+                  onClick={() =>
+                    useDeleteCopy(item, index, inputValue, setInputValue)
+                  }
                 >
                   <FontAwesomeIcon icon={faTrashCan} />
                 </button>

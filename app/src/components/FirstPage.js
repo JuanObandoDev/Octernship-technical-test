@@ -1,10 +1,13 @@
 import React from "react";
 import styles from "../styles/FirstPage.module.css";
-import { useValidateInput } from "./hooks/useValidateInput";
+import { useValidateInput } from "../hooks/useValidateInput";
+import { useContext } from "react";
+import { inputContext } from "../context/inputContext";
 
-function FirstPage({ setValid, value, setValue }) {
+function FirstPage() {
+  const { inputValue, setInputValue, setValid } = useContext(inputContext);
   const validateInput = () => {
-    if (useValidateInput(value)) {
+    if (useValidateInput(inputValue)) {
       setValid(true);
     } else {
       alert("provide a non-empty value");
@@ -15,8 +18,8 @@ function FirstPage({ setValid, value, setValue }) {
     <>
       <div className={styles.main}>
         <input
-          onChange={(e) => setValue(e.target.value)}
-          value={value}
+          onChange={(e) => setInputValue(e.target.value)}
+          value={inputValue}
           className={styles.input}
           type="text"
           placeholder="Enter any text"
