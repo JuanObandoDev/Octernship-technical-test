@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Octernship-technical-test/static/css/main.00ca45ef.css",
+    "main.js": "/Octernship-technical-test/static/js/main.f60c86fe.js",
+    "index.html": "/Octernship-technical-test/index.html",
+    "main.00ca45ef.css.map": "/Octernship-technical-test/static/css/main.00ca45ef.css.map",
+    "main.f60c86fe.js.map": "/Octernship-technical-test/static/js/main.f60c86fe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.00ca45ef.css",
+    "static/js/main.f60c86fe.js"
+  ]
+}
