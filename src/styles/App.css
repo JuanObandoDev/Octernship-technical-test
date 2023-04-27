@@ -1,0 +1,9 @@
+body {
+    background: #312e2b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
