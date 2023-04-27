@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
-import { useValidateInput } from "../../hooks/useValidateInput/useValidateInput";
+import { UseValidateInput } from "../../hooks/useValidateInput/useValidateInput";
 import { inputContext } from "../../context/inputContext/inputContext";
-import styles from "../styles/Header.module.css";
+import styles from "../../styles/Header.module.css";
 
 export function Header() {
   const { valid, setValid, inputValue, setInputValue } =
     useContext(inputContext);
 
   const validateInput = () => {
-    if (useValidateInput(inputValue)) {
+    if (UseValidateInput(inputValue)) {
       setValid(true);
     } else {
       alert("provide a non-empty value");

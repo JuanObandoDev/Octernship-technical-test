@@ -1,13 +1,13 @@
 import React from "react";
-import styles from "../styles/FirstPage.module.css";
-import { useValidateInput } from "../../hooks/useValidateInput/useValidateInput";
+import styles from "../../styles/FirstPage.module.css";
+import { UseValidateInput } from "../../hooks/useValidateInput/useValidateInput";
 import { useContext } from "react";
 import { inputContext } from "../../context/inputContext/inputContext";
 
 function FirstPage() {
   const { inputValue, setInputValue, setValid } = useContext(inputContext);
   const validateInput = () => {
-    if (useValidateInput(inputValue)) {
+    if (UseValidateInput(inputValue)) {
       setValid(true);
     } else {
       alert("provide a non-empty value");

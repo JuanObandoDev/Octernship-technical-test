@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "../styles/SecondPage.module.css";
+import styles from "../../styles/SecondPage.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import { useFindCopy } from "../../hooks/useFindCopy/useFindCopy";
-import { useDeleteCopy } from "../../hooks/useDeleteCopy/useDeleteCopy";
-import { useValidate } from "../../hooks/useValidate/useValidate";
+import { UseFindCopy } from "../../hooks/useFindCopy/useFindCopy";
+import { UseDeleteCopy } from "../../hooks/useDeleteCopy/useDeleteCopy";
+import { UseValidate } from "../../hooks/useValidate/useValidate";
 import { useContext } from "react";
 import { inputContext } from "../../context/inputContext/inputContext";
 
@@ -15,7 +15,7 @@ function SecondPage() {
 
   return (
     <>
-      {useValidate(inputValue) ? (
+      {UseValidate(inputValue) ? (
         <header className={styles.success}>
           <p>
             Success, all duplicate characters was removed <br></br> string
@@ -30,11 +30,11 @@ function SecondPage() {
         {inputValue.split("").map((item, index) => {
           return (
             <div className={styles.card} id={index} key={index}>
-              {useFindCopy(item, index, inputValue) ? (
+              {UseFindCopy(item, index, inputValue) ? (
                 <button
                   className={styles.delete}
                   onClick={() =>
-                    useDeleteCopy(item, index, inputValue, setInputValue)
+                    UseDeleteCopy(item, index, inputValue, setInputValue)
                   }
                 >
                   <FontAwesomeIcon icon={faTrashCan} />
