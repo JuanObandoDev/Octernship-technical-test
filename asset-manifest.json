@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Octernship-technical-test/static/css/main.00ca45ef.css",
-    "main.js": "/Octernship-technical-test/static/js/main.f60c86fe.js",
+    "main.css": "/Octernship-technical-test/static/css/main.7cf1543e.css",
+    "main.js": "/Octernship-technical-test/static/js/main.c090cabc.js",
     "index.html": "/Octernship-technical-test/index.html",
-    "main.00ca45ef.css.map": "/Octernship-technical-test/static/css/main.00ca45ef.css.map",
-    "main.f60c86fe.js.map": "/Octernship-technical-test/static/js/main.f60c86fe.js.map"
+    "main.7cf1543e.css.map": "/Octernship-technical-test/static/css/main.7cf1543e.css.map",
+    "main.c090cabc.js.map": "/Octernship-technical-test/static/js/main.c090cabc.js.map"
   },
   "entrypoints": [
-    "static/css/main.00ca45ef.css",
-    "static/js/main.f60c86fe.js"
+    "static/css/main.7cf1543e.css",
+    "static/js/main.c090cabc.js"
   ]
 }
