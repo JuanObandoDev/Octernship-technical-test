@@ -1,3 +1,4 @@
 export const UseFindCopy = (item, index, value) => {
-  return value.some((value, i) => item === value && index !== i);
+  let valueArr = [...value];
+  return valueArr.some((value, i) => value === item && index !== i);
 };
