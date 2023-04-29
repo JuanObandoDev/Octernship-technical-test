@@ -1,19 +1,13 @@
 import React, { useContext } from "react";
+
 import { UseValidateInput } from "../../hooks/useValidateInput/useValidateInput";
 import { inputContext } from "../../context/inputContext/inputContext";
+
 import styles from "../../styles/Header.module.css";
 
 export function Header() {
   const { valid, setValid, inputValue, setInputValue } =
     useContext(inputContext);
-
-  const validateInput = () => {
-    if (UseValidateInput(inputValue)) {
-      setValid(true);
-    } else {
-      alert("provide a non-empty value");
-    }
-  };
 
   return (
     <header className={styles.pagesBtns}>
@@ -28,7 +22,9 @@ export function Header() {
         First Page
       </button>
       <button
-        onClick={validateInput}
+        onClick={() => {
+          UseValidateInput(inputValue) ? setValid(true) : alert("provide a non-empty value");
+        }}
         className={`${styles.secondPage} ${valid ? styles.active : ""}`}
         disabled={valid}
       >
