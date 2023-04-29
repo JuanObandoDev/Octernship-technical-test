@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Octernship-technical-test/static/css/main.7cf1543e.css",
-    "main.js": "/Octernship-technical-test/static/js/main.c090cabc.js",
+    "main.js": "/Octernship-technical-test/static/js/main.c3e3062a.js",
     "index.html": "/Octernship-technical-test/index.html",
     "main.7cf1543e.css.map": "/Octernship-technical-test/static/css/main.7cf1543e.css.map",
-    "main.c090cabc.js.map": "/Octernship-technical-test/static/js/main.c090cabc.js.map"
+    "main.c3e3062a.js.map": "/Octernship-technical-test/static/js/main.c3e3062a.js.map"
   },
   "entrypoints": [
     "static/css/main.7cf1543e.css",
-    "static/js/main.c090cabc.js"
+    "static/js/main.c3e3062a.js"
   ]
 }
