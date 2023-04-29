@@ -1,9 +1,10 @@
 export const UseDeleteCopy = (item, index, value, setValue) => {
   let valueArr = value.split("");
-  for (let i = 0; i < valueArr.length; i++) {
-    if (item === valueArr[i] && index !== i) {
-      valueArr[i] = null;
+  const updatedValue = valueArr.map((val, i) => {
+    if (item === val && index !== i) {
+      return null;
     }
-  }
-  setValue(valueArr.join(""));
+    return val;
+  });
+  setValue(updatedValue.join(""));
 };
