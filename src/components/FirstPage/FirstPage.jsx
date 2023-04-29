@@ -1,10 +1,12 @@
 import React from "react";
-import styles from "../../styles/FirstPage.module.css";
-import { UseValidateInput } from "../../hooks/useValidateInput/useValidateInput";
 import { useContext } from "react";
+
+import { UseValidateInput } from "../../hooks/useValidateInput/useValidateInput";
 import { inputContext } from "../../context/inputContext/inputContext";
 
-function FirstPage() {
+import styles from "../../styles/FirstPage.module.css";
+
+export function FirstPage() {
   const { inputValue, setInputValue, setValid } = useContext(inputContext);
   const validateInput = () => {
     if (UseValidateInput(inputValue)) {
@@ -15,21 +17,21 @@ function FirstPage() {
   };
 
   return (
-    <>
-      <div className={styles.main}>
-        <input
-          onChange={(e) => setInputValue(e.target.value.toLowerCase())}
-          className={styles.input}
-          type="text"
-          placeholder="Enter any text"
-          id="userInput"
-        />
-        <button className={styles.submit} type="submit" onClick={validateInput}>
-          Submit
-        </button>
-      </div>
-    </>
+    <div className={styles.main}>
+      <input
+        onChange={(e) => setInputValue(e.target.value.toLowerCase())}
+        className={styles.input}
+        type="text"
+        placeholder="Enter any text"
+        id="userInput"
+      />
+      <button 
+        className={styles.submit} 
+        type="submit" 
+        onClick={validateInput}
+      >
+        Submit
+      </button>
+    </div>
   );
 }
-
-export { FirstPage };
