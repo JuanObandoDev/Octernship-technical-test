@@ -44,7 +44,7 @@ To install and run this project, please follow these steps:
 1. Clone this repository to your local machine usign this command:
 
 ```bash
-git clone https://github.com/HousewareHQ/houseware---frontend-engineering-octernship-JuanObandoDev.git
+git clone https://github.com/JuanObandoDev/Octernship-technical-test.git
 ```
 
 2. Install the required dependecies by running the following command in your terminal:
