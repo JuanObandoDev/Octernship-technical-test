@@ -53,7 +53,7 @@ git clone https://github.com/JuanObandoDev/Octernship-technical-test.git
 npm install
 ```
 
-3. Start the development server by runningthe following command:
+3. Start the development server by running the following command:
 
 ```bash
 npm start
