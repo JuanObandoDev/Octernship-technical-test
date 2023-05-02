@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { UseValidateInput } from "../../hooks/useValidateInput/useValidateInput";
+import { validateInput } from "../../utils/validate-input/validateInput";
 import { inputContext } from "../../context/inputContext/inputContext";
 
 import styles from "../../styles/FirstPage.module.css";
@@ -21,7 +21,7 @@ export function FirstPage() {
         className={styles.submit} 
         type="submit" 
         onClick={() => {
-          UseValidateInput(inputValue) ? setValid(true) : alert("provide a non-empty value");
+          validateInput(inputValue) ? setValid(true) : alert("provide a non-empty value");
         }}
       >
         Submit

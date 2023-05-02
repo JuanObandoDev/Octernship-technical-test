@@ -3,9 +3,9 @@ import React, { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
-import { UseFindCopy } from "../../hooks/useFindCopy/useFindCopy";
-import { UseDeleteCopy } from "../../hooks/useDeleteCopy/useDeleteCopy";
-import { UseValidate } from "../../hooks/useValidate/useValidate";
+import { findCopy } from "../../utils/find-copy/findCopy";
+import { deleteCopy } from "../../utils/delete-copy/deleteCopy";
+import { validateCopies } from "../../utils/validate-copies/validateCopies";
 
 import { inputContext } from "../../context/inputContext/inputContext";
 
@@ -18,11 +18,11 @@ export function SecondPage() {
   const itemComponent = (item, index) => {
     return (
       <div className={styles.card} id={index} key={index}>
-        {UseFindCopy(item, index, inputValue) ? (
+        {findCopy(item, index, inputValue) ? (
           <button
             className={styles.delete}
             onClick={() =>
-              UseDeleteCopy(item, index, inputValue, setInputValue)
+              deleteCopy(item, index, inputValue, setInputValue)
             }
           >
             <FontAwesomeIcon icon={faTrashCan} />
@@ -37,7 +37,7 @@ export function SecondPage() {
 
   return (
     <>
-      {UseValidate(inputValue) ? (
+      {validateCopies(inputValue) ? (
         <header className={styles.success}>
           <p>
             Success, all duplicate characters was removed <br></br> string
