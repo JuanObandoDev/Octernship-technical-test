@@ -44,7 +44,7 @@ To install and run this project, please follow these steps:
 1. Clone this repository to your local machine usign this command:
 
 ```bash
-git clone https://github.com/HousewareHQ/houseware---frontend-engineering-octernship-JuanObandoDev.git
+git clone https://github.com/JuanObandoDev/Octernship-technical-test.git
 ```
 
 2. Install the required dependecies by running the following command in your terminal:
@@ -53,7 +53,7 @@ git clone https://github.com/HousewareHQ/houseware---frontend-engineering-octern
 npm install
 ```
 
-3. Start the development server by runningthe following command:
+3. Start the development server by running the following command:
 
 ```bash
 npm start
